@@ -1,0 +1,64 @@
+/* Ramu Kode design tokens: satu sumber kebenaran.
+   Aturan: komponen hanya boleh memakai token semantik (lapisan 2).
+   Primitif (lapisan 1) hanya dipakai di file ini.
+   Status palet: DRAFT. Sesuaikan setelah logo final. */
+
+:root {
+    /* Lapisan 1: primitif */
+    --rk-indigo-50: #f8f8fc;
+    --rk-indigo-100: #ecedf8;
+    --rk-indigo-200: #d5d7ee;
+    --rk-indigo-500: #4b51b8;
+    --rk-indigo-600: #52558a;
+    --rk-indigo-700: #2b2f7a;
+    --rk-indigo-900: #1b1e52;
+    --rk-turmeric-100: #fdebc8;
+    --rk-turmeric-300: #fbcb7a;
+    --rk-turmeric-500: #f5a623;
+    --rk-turmeric-600: #c77f00;
+    --rk-cream-100: #fff6e5;
+    --rk-red-700: #b3261e;
+    --rk-green-700: #1f7a4d; /* khusus status sukses, bukan warna brand */
+    --rk-white: #ffffff;
+
+    /* Lapisan 2: semantik (inilah yang dipakai komponen) */
+    --rk-bg: var(--rk-indigo-50);
+    --rk-surface: var(--rk-white);
+    --rk-surface-muted: var(--rk-indigo-100);
+    --rk-surface-warm: var(--rk-cream-100);
+    --rk-border: var(--rk-indigo-200);
+    --rk-text: var(--rk-indigo-900);
+    --rk-text-muted: var(--rk-indigo-600);
+    --rk-primary: var(--rk-indigo-700);
+    --rk-primary-hover: var(--rk-indigo-900);
+    --rk-on-primary: var(--rk-white);
+    --rk-accent: var(--rk-turmeric-500);
+    --rk-accent-hover: var(--rk-turmeric-300);
+    --rk-on-accent: var(--rk-indigo-900);
+    --rk-focus: var(--rk-indigo-500);
+    --rk-danger: var(--rk-red-700);
+    --rk-success: var(--rk-green-700);
+
+    /* Tipografi */
+    --rk-font-display:
+        "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+    --rk-font-body:
+        "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --rk-text-display: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+    --rk-text-headline: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+    --rk-measure: 65ch;
+
+    /* Bentuk: radius bertingkat sesuai peran */
+    --rk-radius-sm: 0.5rem; /* input, badge */
+    --rk-radius-md: 0.75rem; /* tombol */
+    --rk-radius-lg: 1.25rem; /* kartu */
+
+    /* Bayangan: offset kunyit = ciri khas Ramu Kode, hanya untuk satu elemen unggulan per layar */
+    --rk-shadow-offset: 5px 5px 0 0 var(--rk-turmeric-500);
+    --rk-shadow-overlay: 0 12px 32px -8px rgb(27 30 82 / 0.28);
+
+    /* Gerak */
+    --rk-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --rk-duration-fast: 150ms;
+    --rk-duration-base: 250ms;
+}
